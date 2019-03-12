@@ -1,13 +1,3 @@
-# number_to_words
-
-A API to the convert number to words by giving localeID. Now only support English And Malayalam need your contribution .
-
-## Usage
-To use this plugin, add number_to_words as a [dependency in your pubspec.yaml](https://flutter.io/docs/development/packages-and-plugins/using-packages) file.
-
-## Example
-
-```
 import 'package:number_to_words/number_to_words.dart';
 
 void main() {
@@ -20,5 +10,3 @@ void main() {
   print(NumberToWord().convert('en-in',100)); //hundred
   print(NumberToWord().convert('en-in',10)); //ten
 }
-
-```

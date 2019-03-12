@@ -1,11 +1,11 @@
 name: number_to_words
 description: Convert number into words by localeID
 version: 0.0.1
-author:
-homepage:
+author: Benjith Kizhisseri<mpbenjith@gmail.com>
+homepage: https://github.com/Benjith/NumberToWords
 
 environment:
-  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+  sdk: ">=1.19.0-dev.68.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -14,6 +14,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+    
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
