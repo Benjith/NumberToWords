@@ -1,6 +1,6 @@
 # number_to_words
 
-A API to the convert number to words by giving localeID. Now only support English And Malayalam need your contribution .
+ API convert number to words by `localeID`. Now only support English And Malayalam. please contribute  .
 
 ## Usage
 To use this plugin, add number_to_words as a [dependency in your pubspec.yaml](https://flutter.io/docs/development/packages-and-plugins/using-packages) file.
