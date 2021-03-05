@@ -14,7 +14,7 @@ class S implements WidgetsLocalizations {
   static const GeneratedLocalizationsDelegate delegate =
     GeneratedLocalizationsDelegate();
 
-  static S of(BuildContext context) => Localizations.of<S>(context, S);
+  static S? of(BuildContext context) => Localizations.of<S>(context, S);
 
   @override
   TextDirection get textDirection => TextDirection.ltr;
@@ -34,8 +34,8 @@ class GeneratedLocalizationsDelegate extends LocalizationsDelegate<S> {
     ];
   }
 
-  LocaleListResolutionCallback listResolution({Locale fallback}) {
-    return (List<Locale> locales, Iterable<Locale> supported) {
+  LocaleListResolutionCallback listResolution({Locale? fallback}) {
+    return (List<Locale>? locales, Iterable<Locale> supported) {
       if (locales == null || locales.isEmpty) {
         return fallback ?? supported.first;
       } else {
@@ -44,13 +44,13 @@ class GeneratedLocalizationsDelegate extends LocalizationsDelegate<S> {
     };
   }
 
-  LocaleResolutionCallback resolution({Locale fallback}) {
-    return (Locale locale, Iterable<Locale> supported) {
+  LocaleResolutionCallback resolution({Locale? fallback}) {
+    return (Locale? locale, Iterable<Locale> supported) {
       return _resolve(locale, fallback, supported);
     };
   }
 
-  Locale _resolve(Locale locale, Locale fallback, Iterable<Locale> supported) {
+  Locale _resolve(Locale? locale, Locale? fallback, Iterable<Locale> supported) {
     if (locale == null || !isSupported(locale)) {
       return fallback ?? supported.first;
     }
@@ -68,7 +68,7 @@ class GeneratedLocalizationsDelegate extends LocalizationsDelegate<S> {
 
   @override
   Future<S> load(Locale locale) {
-    final String lang = getLang(locale);
+    final String? lang = getLang(locale);
     if (lang != null) {
       switch (lang) {
         case "en":
@@ -88,8 +88,8 @@ class GeneratedLocalizationsDelegate extends LocalizationsDelegate<S> {
   bool shouldReload(GeneratedLocalizationsDelegate old) => false;
 }
 
-String getLang(Locale l) => l == null
+String? getLang(Locale l) => l == null
   ? null
-  : l.countryCode != null && l.countryCode.isEmpty
+  : l.countryCode != null && l.countryCode!.isEmpty
     ? l.languageCode
     : l.toString();

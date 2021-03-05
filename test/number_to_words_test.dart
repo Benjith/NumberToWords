@@ -7,6 +7,5 @@ void main() {
     final numberToWord = NumberToWord();
     expect(numberToWord.convert('en-in',2), 'two');
     expect(numberToWord.convert('en-in',5), 'five');
-    expect(() => numberToWord.convert('sda',null), throwsNoSuchMethodError);
   });
 }
