@@ -1,9 +1,7 @@
 
 import 'package:number_to_words/number_to_words.dart';
 
-
-void main() {
-
+void main(List<String> arguments) {
   print(NumberToWord().convert('ml',21)); //ഇരുപത്തി ഒന്ന്
   print(NumberToWord().convert('ml',10)); //പത്ത്
   print(NumberToWord().convert('ml',1000)); //ആയിരം

@@ -1,11 +1,11 @@
 name: number_to_words
 description: Convert number into words by localeID
-version: 0.0.3
+version: 1.0.0
 author: Benjith Kizhisseri<mpbenjith@gmail.com>
 homepage: https://github.com/Benjith/NumberToWords
 
 environment:
-  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 
 
 
