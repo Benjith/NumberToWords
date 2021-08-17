@@ -1,8 +1,15 @@
 library number_to_words;
 
-class NumberToWord{
+enum Locale {
+  en_ind,
+  ml,
+}
 
-  String convert(String locale, int digit) {
+class NumberToWord {
+  ///Specify output language and digit that to convert
+  ///Locale.en_ind is meant Indian English
+  ///Locale.ml is meant Malayalam
+  String convert(Locale locale, int digit) {
     final int number = digit;
     String numberString = '0000000000' + number.toString();
     numberString =
@@ -10,7 +17,7 @@ class NumberToWord{
     var str = '';
 
     switch (locale) {
-      case 'en-in':
+      case Locale.en_ind:
         List<String> ones = [
           '',
           'one ',
@@ -109,7 +116,7 @@ class NumberToWord{
               : ''; //ones
         }
         break;
-      case 'ml':
+      case Locale.ml:
         List<String> ones = [
           '',
           'ഒന്ന് ',
@@ -299,7 +306,7 @@ class NumberToWord{
               numberString[8] == '0' &&
               numberString[9] == '0') {
             str += thousandMlSingle[
-            int.parse('${numberString[5]}${numberString[6]}')];
+                int.parse('${numberString[5]}${numberString[6]}')];
           } else {
             str +=
                 thousandsMl[int.parse('${numberString[5]}${numberString[6]}')] +
@@ -320,22 +327,22 @@ class NumberToWord{
               numberString[9] == '0') {
             numberString[6] == '1'
                 ? str +=
-                tens[int.parse('${numberString[5]}')] + ' ' + 'ഒന്നായിരം'
+                    tens[int.parse('${numberString[5]}')] + ' ' + 'ഒന്നായിരം'
                 : str += tens[int.parse('${numberString[5]}')] +
-                ' ' +
-                thousandMlSingle[int.parse('${numberString[6]}')] +
-                ' ';
+                    ' ' +
+                    thousandMlSingle[int.parse('${numberString[6]}')] +
+                    ' ';
             // str +=
             //     tens[int.parse('${numberString[5]}')] +' '+ thousandMlSingle[int.parse('${numberString[6]}')];
           } else {
             numberString[6] == '1'
                 ? str += tens[int.parse('${numberString[5]}')] +
-                ' ' +
-                'ഒന്നായിരത്തി '
+                    ' ' +
+                    'ഒന്നായിരത്തി '
                 : str += tens[int.parse('${numberString[5]}')] +
-                ' ' +
-                thousandsMl[int.parse('${numberString[6]}')] +
-                ' ';
+                    ' ' +
+                    thousandsMl[int.parse('${numberString[6]}')] +
+                    ' ';
           }
         } else {
           if (numberString[6] != '0' &&
@@ -386,6 +393,4 @@ class NumberToWord{
 
     return str;
   }
-
 }
-
