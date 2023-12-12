@@ -12,7 +12,7 @@ import 'package:number_to_words/number_to_words.dart';
 
 void main() {
 
-   print(NumberToWord().convert(Locale.ml, 21)); //ഇരുപത്തി ഒന്ന്
+   print(NumberToWord().convert(Locale.ml, 21)); //ഇരുപത്തിയൊന്ന്
    print(NumberToWord().convert(Locale.ml, 10)); //പത്ത്
    print(NumberToWord().convert(Locale.ml, 1000)); //ആയിരം
    print(NumberToWord().convert(Locale.en_ind, 1000)); //thousand
